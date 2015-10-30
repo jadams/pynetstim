@@ -8,6 +8,10 @@ def stop_all():
         p.terminate()
 
 
+def start_all():
+    start_http()
+
+
 def start_http():
     p = multiprocessing.Process(target=http.start, args=())
     p.start()
@@ -16,6 +20,9 @@ def start_http():
 def process_control(command):
     if command == 'stop':
         stop_all()
+        return 0
+    elif command == 'all':
+        start_all()
         return 0
     elif command == 'http':
         start_http()
