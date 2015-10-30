@@ -1,5 +1,6 @@
 import SocketServer
 import threading
+import controller
 
 PORT=12345
 
@@ -10,11 +11,11 @@ class pnsUDPHandler(SocketServer.BaseRequestHandler):
         print "%s wrote:" % self.client_address[0]
         print data
         rdata = 'OK: ' + data
-        #pc = process_control(data)
-        #if pc == 0:
-        #    rdata = 'OK:' + data.upper()
-        #else:
-        #    rdata = 'FAILED'
+        pc = controller.process_control(data)
+        if pc == 0:
+            rdata = 'OK:' + data.upper()
+        else:
+            rdata = 'FAILED'
         socket.sendto(rdata, self.client_address)
 
 
