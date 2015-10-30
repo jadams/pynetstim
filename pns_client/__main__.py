@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from core import main
+from pns_client import *
 
 if __name__ == '__main__':
-    main()
+    reciever.start_listener()
