@@ -4,7 +4,7 @@ Make some http traffic
 
 import urllib2 as urllib
 from pns_client import utils
-import time
+from pns_client import timer
 
 
 def download_site(site):
@@ -13,8 +13,7 @@ def download_site(site):
 
 def start():
         while(1):
+                timer.sleep_normal()
                 site = utils.get_host()
                 print 'Downloading ' + site
                 download_site(site)
-                time.sleep(10)
-
