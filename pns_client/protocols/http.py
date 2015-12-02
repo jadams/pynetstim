@@ -11,6 +11,7 @@ def download_site(site):
         site = 'http://' + site
         page = urllib.urlopen(site)
 
+
 def start():
         while(1):
                 timer.sleep_normal()

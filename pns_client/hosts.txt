@@ -1,0 +1,12 @@
+google.com
+facebook.com
+cnn.com
+youtube.com
+amazon.com
+wikipedia.org
+bing.com
+reddit.com
+apple.com
+imgur.com
+imdb.com
+craigslist.org
